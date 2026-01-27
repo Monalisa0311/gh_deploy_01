@@ -20,4 +20,7 @@ jobs:
           LOG_FILE: "super-linter.log"
           CREATE_LOG_FILE: "true"
           LOG_LEVEL: "DEBUG"
-          DISABLE_CHECKOV: "true"
+          DISABLE_CHECKOV: true
+
+      - name: Show Super-Linter Log
+        run: cat $GITHUB_WORKSPACE/super-linter.log
