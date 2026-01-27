@@ -17,4 +17,7 @@ jobs:
         uses: github/super-linter@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOG_FILE: "super-linter.log"
+          CREATE_LOG_FILE: "true"
+          LOG_LEVEL: "DEBUG"
           DISABLE_CHECKOV: "true"
