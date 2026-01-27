@@ -1,0 +1,19 @@
+name: Deploy to Github Pages
+
+on: push
+
+jobs:
+  Super-Lint:
+    runs on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Say hello
+      #echo use run not uses
+        run: echo "Start Running Super Linter"
+
+      - name: Run Super Linter
+        uses: github/super-linter@v6
+        env:
+          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }}
