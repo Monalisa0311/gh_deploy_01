@@ -1,1 +1,3 @@
-This is a read me file to deploy a basics HTML page
+# GitHub Pages Deployment
+
+This repository deploys a basic HTML page using GitHub Pages.
