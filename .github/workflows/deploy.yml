@@ -10,7 +10,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Say hello
-      #echo use run not uses
         run: echo "Start Running Super Linter"
 
       - name: Run Super Linter
@@ -20,7 +19,7 @@ jobs:
           LOG_FILE: "super-linter.log"
           CREATE_LOG_FILE: "true"
           LOG_LEVEL: "DEBUG"
-          DISABLE_CHECKOV: true
+          VALIDATE_CHECKOV: false
 
       - name: Show Super-Linter Log
         run: cat $GITHUB_WORKSPACE/super-linter.log
