@@ -16,5 +16,5 @@ jobs:
       - name: Run Super Linter
         uses: github/super-linter@v6
         env:
-          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }}
-          DISABLE_CHECKOV : true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISABLE_CHECKOV: "true"
