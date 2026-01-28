@@ -22,4 +22,4 @@ jobs:
           VALIDATE_CHECKOV: false
 
       - name: Show Super-Linter Log
-        run: cat $GITHUB_WORKSPACE/super-linter.log
+        run: cat "$GITHUB_WORKSPACE/super-linter.log"
