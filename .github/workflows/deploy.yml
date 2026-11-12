@@ -39,5 +39,5 @@ jobs:
       - name: Chekout Code
         uses: actions/checkout@v4 
 
-      # - name: Running echo cmd
-      #   run: echo "hello"
+      - name: Running echo cmd
+        run: echo "hello"
