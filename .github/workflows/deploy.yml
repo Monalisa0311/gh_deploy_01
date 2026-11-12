@@ -1,25 +1,40 @@
-name: Deploy to Github Pages
+# name: Deploy to Github Pages
 
-on: push
+# on: push
+
+# jobs:
+#   Super-Lint:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Code
+#         uses: actions/checkout@v4
+
+#       - name: Say hello
+#         run: echo "Start Running Super Linter"
+
+#       - name: Run Super Linter
+#         uses: github/super-linter@v6
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           LOG_FILE: "super-linter.log"
+#           CREATE_LOG_FILE: "true"
+#           LOG_LEVEL: "DEBUG"
+#           VALIDATE_CHECKOV: false
+
+#       # - name: Show Super-Linter Log
+#       #   run: cat "$GITHUB_WORKSPACE/super-linter.log"
+
+
+name: Github Deploy
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  Super-Lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+Set-up:
+runs-on: ubuntu-latest
 
-      - name: Say hello
-        run: echo "Start Running Super Linter"
-
-      - name: Run Super Linter
-        uses: github/super-linter@v6
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LOG_FILE: "super-linter.log"
-          CREATE_LOG_FILE: "true"
-          LOG_LEVEL: "DEBUG"
-          VALIDATE_CHECKOV: false
-
-      # - name: Show Super-Linter Log
-      #   run: cat "$GITHUB_WORKSPACE/super-linter.log"
+steps:
+- name: Chekout Code
+  actions: actions/checkout@v4
