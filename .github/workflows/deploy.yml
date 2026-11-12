@@ -38,3 +38,6 @@ jobs:
     steps:
       - name: Chekout Code
         actions: actions/checkout@v4 
+
+      - name: Running echo cmd
+        run: echo hello
