@@ -35,6 +35,6 @@ jobs:
   Setup:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Chekout Code
-      actions: actions/checkout@v4
+    steps:
+      - name: Chekout Code
+        actions: actions/checkout@v4 
